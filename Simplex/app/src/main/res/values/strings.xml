@@ -1,0 +1,42 @@
+<resources>
+	<string name="app_name">Simplex</string>
+
+	<!-- activity_login -->
+	<string name="textViewGreeting">Welcome back!</string>
+	<string name="textViewMessage">Log into your account.</string>
+	<string name="editTextUsername">Enter your email</string>
+	<string name="editTextPassword">Enter your password</string>
+	<string name="textViewForgot"><font color="#FF33CC99">Forgot password?</font></string>
+	<string name="buttonLogin">CONTINUE</string>
+	<string name="buttonRegister">REGISTER</string>
+	<string name="invalidLogin">Invalid login</string>
+	<string name="registrationError">Error registering</string>
+
+	<!-- activity_inventory_list -->
+	<string name="textViewHeader">Inventory List</string>
+	<string name="textViewEmpty">Oh no… It seems your inventory is empty. Add a new item to start.</string>
+
+	<!-- activity_edit_item -->
+	<string name="inputItemName">Enter Item Name</string>
+	<string name="buttonSave">Save Item</string>
+	<string name="buttonDelete">Delete Item</string>
+	<string name="quantity">Quantity</string>
+	<string name="saveError">Error saving item</string>
+
+	<!-- itemAdapter -->
+	<string name="deleteItemMessage">Delete Item</string>
+	<string name="confirmDelete">Are you sure you want to delete this item?</string>
+	<string name="deleteError">Error deleting item</string>
+
+	<!-- activity_sms_notifications -->
+	<string name="smsNotificationBoxHeader">Permission needed</string>
+	<string name="smsPermissionExplanation">Receive SMS notifications when inventory items are running low.</string>
+	<string name="receiveNotifications">Receive Notifications?</string>
+
+	<!-- menu -->
+	<string name="add_item">Add Item</string>
+	<string name="edit_item">Edit Item</string>
+	<string name="manageNotifications">Manage Notifications</string>
+	<string name="menuLogout">Logout</string>
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity" >
+
+    <!-- Header for create new item -->
+
+    <!-- Input item name field -->
+
+    <!-- Input item quantity -->
+    <EditText
+        android:id="@+id/inputItemName"
+        android:layout_width="332dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="@string/inputItemName"
+        android:inputType="text|textCapWords"
+        android:nextFocusDown="@id/inputQuantity"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputQuantity"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:nextFocusUp="@id/inputItemName"
+        android:nextFocusDown="@id/buttonSave"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecrementQty"
+        app:layout_constraintTop_toTopOf="@+id/buttonDecrementQty" />
+
+    <!-- Decrease quantity button -->
+    <ImageButton
+        android:id="@+id/buttonDecrementQty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/green_200"
+        android:onClick="decrementQuantity"
+        android:src="@drawable/ic_remove"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/inputItemName"
+        app:tint="@color/white"
+        tools:src="@drawable/ic_remove" />
+
+    <!-- Increase quantity button -->
+    <ImageButton
+        android:id="@+id/buttonIncrementQty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/green_200"
+        android:onClick="incrementQuantity"
+        android:src="@drawable/ic_add"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/inputQuantity"
+        app:layout_constraintTop_toTopOf="@+id/buttonDecrementQty"
+        app:tint="@color/white"
+        tools:src="@drawable/ic_add" />
+
+    <!-- Quantity label -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/quantity"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputItemName" />
+
+    <!-- Save item button -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="48dp"
+        android:nextFocusUp="@id/inputQuantity"
+        android:onClick="handleSaveItem"
+        android:text="@string/buttonSave"
+        app:layout_constraintEnd_toEndOf="@+id/buttonIncrementQty"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIncrementQty" />
+
+    <!-- Delete item button -->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        android:onClick="handleDeleteItem"
+        android:text="@string/buttonDelete"
+        app:icon="@drawable/trashcan"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSave"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Display item name -->
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Input item quantity -->
+    <EditText
+        android:id="@+id/editQuantity"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecrementQty"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <!-- Decrease quantity button -->
+    <ImageButton
+        android:id="@+id/buttonDecrementQty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/green_200"
+        android:src="@drawable/ic_remove"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemName"
+        app:tint="@color/white"
+        tools:src="@drawable/ic_remove" />
+
+    <!-- Increase quantity button -->
+    <ImageButton
+        android:id="@+id/buttonIncrementQty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/green_200"
+        android:src="@drawable/ic_add"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/editQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/itemName"
+        app:tint="@color/white"
+        tools:src="@drawable/ic_add" />
+
+    <!-- Actions button -->
+    <ImageButton
+        android:id="@+id/buttonActions"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemName"
+        app:srcCompat="@drawable/ic_baseline_more_vert_24"
+        app:tint="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

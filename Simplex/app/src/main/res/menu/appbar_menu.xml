@@ -1,0 +1,21 @@
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+	<!-- Open menu -->
+	<item
+		android:id="@+id/action_add_item"
+		android:icon="@drawable/plus"
+		android:title="@string/add_item"
+		app:showAsAction="ifRoom" />
+
+	<!-- Menu options -->
+	<item android:id="@+id/actionToggleNotifications"
+		android:title="@string/manageNotifications"
+		app:showAsAction="never"/>
+
+	<item android:id="@+id/actionLogout"
+		android:title="@string/menuLogout"
+		app:showAsAction="never"/>
+
+</menu>
